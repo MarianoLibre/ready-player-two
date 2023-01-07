@@ -1,0 +1,63 @@
+:root
+{
+  --bg-normal: hsl(245, 10%, 10%);
+  --bg-light: hsl(245, 10%, 24%);
+  --fg-normal: hsl(245, 10%, 40%);
+  --board-size: 90vh;
+  --border-size: 32px;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body
+{
+  background-color: var(--bg-normal);
+  color: var(--fg-normal);
+  font-family: system-ui, -apple-system, blinkmacsystemfont, 'segoe ui', roboto, oxygen, ubuntu, cantarell, 'open sans', 'helvetica neue', sans-serif;
+}
+
+#root
+{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#board
+{
+  width: var(--board-size);
+  height: var(--board-size);
+  display: grid;
+  grid-template-columns: var(--border-size) repeat(8, 1fr) var(--border-size);
+  grid-template-rows: var(--border-size) repeat(8, 1fr) var(--border-size);
+}
+
+.square
+{}
+
+.border
+{
+  border: none;
+}
+
+.numbers,
+.letters
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.white
+{
+  background-color: var(--bg-light);
+}

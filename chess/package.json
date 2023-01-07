@@ -1,10 +1,18 @@
 {
   "name": "chess",
   "version": "0.0.1",
+  "private": true,
   "description": "chess game",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build --no-source-maps --no-optimize"
+  },
+  "source": "src/index.html",
+  "targets": {
+    "default": {
+      "distDir": "./dist"
+    }
   },
   "repository": {
     "type": "git",
@@ -16,6 +24,7 @@
   ],
   "author": "Mariano Macri <mariano.macri@mercadolibre.com>",
   "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/MarianoLibre/ready-player-two/chess#readme",
   "devDependencies": {
     "parcel": "^2.8.2"
   }
